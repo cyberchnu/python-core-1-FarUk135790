@@ -1,10 +1,9 @@
 def calculate_fuel(distance):
-  # Type your code
-  if distance <= 0:
-    return 100
-  else:
-    fuel_needed = distance * 10
-    if fuel_needed < 100:
-      return 100
-    else:
-      return fuel_needed
+    if not isinstance(distance, (int, float)) or distance <= 0:
+        return "100"
+    fuel = distance * 2
+    fuel = max(fuel, 100)
+    return fuel
+distance = 100
+result = calculate_fuel(distance)
+print(f"Обсяг палива для відстані {distance} км: {result} літрів")
