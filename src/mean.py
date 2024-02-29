@@ -1,3 +1,4 @@
 def mean(number):
-  # Type your code
-  return 
+    digits = [int(digit) for digit in str(number)]
+    mean_value = sum(digits) / len(digits)
+    return mean_value
